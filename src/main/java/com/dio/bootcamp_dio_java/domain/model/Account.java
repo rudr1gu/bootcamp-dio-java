@@ -2,6 +2,7 @@ package com.dio.bootcamp_dio_java.domain.model;
 
 import java.math.BigDecimal;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,11 +21,14 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @Column(unique = true)
     private String number;
 
     private String agency;
 
+    @Column(precision = 2, scale = 13)
     private BigDecimal balance;
 
+    @Column(precision = 2, scale = 13)
     private BigDecimal limit;
 }
