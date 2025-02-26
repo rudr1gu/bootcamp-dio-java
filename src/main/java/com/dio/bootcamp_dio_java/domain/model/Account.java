@@ -1,4 +1,4 @@
-package com.dio.bootcamp_dio_java.model;
+package com.dio.bootcamp_dio_java.domain.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,12 +11,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "tb_user")
-public class User {
+@Table(name = "tb_account")
+public class Account {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     
-    private String name;
+    private long number;
+
+    private String agency;
+
+    private double balance;
+
+    private double limit;
 }
