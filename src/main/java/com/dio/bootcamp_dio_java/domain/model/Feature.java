@@ -1,15 +1,12 @@
 package com.dio.bootcamp_dio_java.domain.model;
 
 import jakarta.persistence.Entity;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Table;
 
-@Getter
-@Setter
+
+
 @Entity
-public class Feature {
+@Table(name = "tb_feature")
+public class Feature extends BaseItem{
 
-    private Long id;
-    private String icon;
-    private String description;
 }
